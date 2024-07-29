@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer')
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
- 
+const {Circle, Square, Triangle} = require("./lib/shapes")
 inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
 
 //question colors stuff
@@ -26,7 +26,7 @@ const htmlNamedColors = [
   ];
 const isNamedColor = (color) => htmlNamedColors.includes(color.toLowerCase());
 const isHexColor = (hex) => /^#([0-9A-F]{3}){1,2}$/i.test(hex);
-// Regular Expression to ensure a proper hex code, starting with a # and including 3 or 6 numbers or letters A thru F. The letters can be upper or lowercase.
+// Regular Expression to ensure a proper hex code, starting with a # and including 3 or 6 numbers or letters A thru F (hex codes can be 3 char too and still be valid). The letters can be upper or lowercase, though hexcodes themselves are not case-sensitive anyway; it just helps standardize the inputs better.
 
 //questions
 function userShapeQ(){
@@ -67,15 +67,21 @@ function userShapeQ(){
     }
  ]};
 
-
 async function init(){
     const questions = userShapeQ();
     const answers = await inquirer.prompt(questions);
-    // answers.licenseBadge = getLicenseBadge(answers.license);
-    const outputSVG = svgOutput(answers);
+    let shape;
+    if (answers.shape = "Circle"){
+        shape = new Circle(answers.shapecolor, answers.text, answers.textcolor)
+    } else if (answers.shape = "Triangle"){
+        shape = new Triangle(answers.shapecolor, answers.text, answers.textcolor)
+    } else if (answers.shape = "Square"){
+        shape = new Square(answers.shapecolor, answers.text, answers.textcolor)
+    }
+    const outputSVG = shape.render();
     fs.writeFile('logo.svg', outputSVG, (err) =>{
         if (err){
-            console.error("The SVG file could not be generated; please try again.")
+            console.error("The SVG file could not be generated; you aren't much of a painter...")
         } else {
             console.log("SVG file successfully generated from the information collected. You're an artist!")
         }
@@ -83,12 +89,3 @@ async function init(){
 };
 
 init();
-
-
-// function svgOutput(svgObj) {
-//     const svg = `# ${mdObj.title}
-  
-
-//   `
-//   return markdown;
-//   }
