@@ -25,7 +25,23 @@
   If you want to contribute to this project - particularly if you know how I might refactor the code so it works with later versions of inquirer, see my contact info in the Questions section below. I am also curious about ways we might allow the user to give information that we could apply within bounds to ensure we are giving greater design flexibility without allowing generation of useless or broken shapes. Don’t hesitate to reach out! I am a beginner at this stuff but always hungry to learn from others in the community.
 
   ## Tests
-  GIVE INFORMATION ON TESTS HERE
+  There is currently one testing suite to cover all three shapes (which have their own sub-suites).
+
+  TRIANGLES Class Constructor
+  - it should render a white triangle with the black text "one" when the user picks Triangle and specifies that information.', () => {
+  - it should render a green triangle with the purple text "TWO" when the user picks Triangle and specifies that information.
+  - it should render a yellow triangle with the red text "tre" when the user picks Triangle and specifies that information.
+   
+  CIRCLES Class Constructor
+  - it should render an orange circle with the black text "txt" when the user picks Circle and specifies that information. 
+  - it should render a "chocolate" circle with the crimson text "TiM" when the user picks Circle and specifies that information.
+  - it should render a cyan circle with the "darkslategrey" text "MAC" when the user picks Circle and specifies that information.
+  
+  
+  SQUARES Class Constructor
+  - it should render a fuschia square with the green text "svg" when the user picks Square and specifies that information.
+  - it should render a "bisque" square with the blue text "SVG" when the user picks Square and specifies that information.
+  - it should render a peach square with the light blue text "svG" when the user picks Square and specifies that information.
   
   ## Credits
   I wanted color validation to actually prevent users from giving bunk color answers, and two souces helped me achieve that goal while adhering to the project requirements for color entry/rendering.
