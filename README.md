@@ -28,7 +28,7 @@
   There is currently one testing suite to cover all three shapes (which have their own sub-suites).
 
   TRIANGLES Class Constructor
-  - it should render a white triangle with the black text "one" when the user picks Triangle and specifies that information.', () => {
+  - it should render a white triangle with the black text "one" when the user picks Triangle and specifies that information.
   - it should render a green triangle with the purple text "TWO" when the user picks Triangle and specifies that information.
   - it should render a yellow triangle with the red text "tre" when the user picks Triangle and specifies that information.
    
