@@ -19,7 +19,7 @@
   ## Usage
   To use this project, ensure you have the node packages installed as specified in the Installation section above. Then open a terminal on the project root and simply run node index.js - from there, just answer the questions!
 
-  [A video tutorial for using readme-generator](https://drive.google.com/file/d/1lYZnOAMy-pIvVc-_zIaOtUkFdfr4m354/view?usp=sharing)
+  [A video tutorial for using svg-logo-maker](https://drive.google.com/file/d/14EdIQuUuhoaR1vc-B7bJ1-Dc5kDgodIq/view?usp=sharing)
 
   ## Contributing
   If you want to contribute to this project - particularly if you know how I might refactor the code so it works with later versions of inquirer, see my contact info in the Questions section below. I am also curious about ways we might allow the user to give information that we could apply within bounds to ensure we are giving greater design flexibility without allowing generation of useless or broken shapes. Don’t hesitate to reach out! I am a beginner at this stuff but always hungry to learn from others in the community.
