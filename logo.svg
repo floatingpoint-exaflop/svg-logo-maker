@@ -2,7 +2,7 @@
     <html>
         <svg width="200" height="200" viewBox="-100 -100 200 200">
             <rect x="-100" y="-100" width="200" height="200" fill="pink"/>        
-            <text fill="#FFFFFF" x="0" y="0" font-size="40" text-anchor="middle">TIM</text>
+            <text fill="#1c0808" x="0" y="0" font-size="40" text-anchor="middle">TIM</text>
         </svg>
     </html>
     
